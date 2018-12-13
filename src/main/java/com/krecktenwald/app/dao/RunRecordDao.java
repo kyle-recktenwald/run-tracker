@@ -11,13 +11,12 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 import java.util.UUID;
 import java.util.logging.Logger;
 
-import com.krecktenwald.app.conversion.AppConversion;
+import com.krecktenwald.app.converter.AppConversion;
 import com.krecktenwald.app.domain.RunRecord;
 import com.krecktenwald.app.domain.RunRoute;
 

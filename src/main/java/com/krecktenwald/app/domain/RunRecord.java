@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.UUID;
 
-import com.krecktenwald.app.conversion.AppConversion;
+import com.krecktenwald.app.converter.AppConversion;
 
 public class RunRecord {
     

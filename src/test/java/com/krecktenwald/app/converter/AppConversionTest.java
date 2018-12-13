@@ -1,4 +1,4 @@
-package com.krecktenwald.app.conversion;
+package com.krecktenwald.app.converter;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import java.time.Duration;
 
 import org.junit.*;
 
-import com.krecktenwald.app.conversion.AppConversion.TimeUnit;
+import com.krecktenwald.app.converter.AppConversion.TimeUnit;
 
 public class AppConversionTest {
 

@@ -1,4 +1,4 @@
-package com.krecktenwald.app.conversion;
+package com.krecktenwald.app.converter;
 
 import java.time.Duration;
 import java.time.LocalDate;

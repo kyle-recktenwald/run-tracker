@@ -4,13 +4,10 @@ import java.sql.SQLException;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.UUID;
 
-import com.krecktenwald.app.conversion.AppConversion;
-import com.krecktenwald.app.conversion.RunRouteConversion;
+import com.krecktenwald.app.converter.AppConversion;
 import com.krecktenwald.app.dao.RunRecordDao;
 import com.krecktenwald.app.dao.RunRouteDao;
 import com.krecktenwald.app.domain.RunRecord;
