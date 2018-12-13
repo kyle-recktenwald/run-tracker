@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.krecktenwald.app.domain.RunRoute;
+
 public class CSVHandler {
 
     public ArrayList readCSV(String fileName) {
@@ -90,8 +92,6 @@ public class CSVHandler {
             String name = runningRoute[1];
             double miles = Double.parseDouble(runningRoute[2]);
             
-            
-            runRoute.setId(id);
             
         }
         
