@@ -27,7 +27,7 @@ public class Database {
 		String url = "jdbc:postgresql://localhost/runtracker";
 		props = new Properties();
 		props.setProperty("user","postgres");
-		props.setProperty("password","password");
+		props.setProperty("password","eagles123");
 		conn = DriverManager.getConnection(url, props);
 		
 		//Test Connection with Query
