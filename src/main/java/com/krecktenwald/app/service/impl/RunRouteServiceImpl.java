@@ -1,3 +1,4 @@
+/*
 package com.krecktenwald.app.service.impl;
 
 import com.krecktenwald.app.service.RunRouteService;
@@ -25,5 +26,6 @@ public class RunRouteServiceImpl implements RunRouteService{
     public List<UserDto> getAllUsers() {
         return userRepository.findAll().stream().map(UserConverter::entityToDto).collect(Collectors.toList());
     }
-    
+
 }
+*/

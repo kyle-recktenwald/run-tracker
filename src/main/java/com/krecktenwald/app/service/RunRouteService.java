@@ -7,6 +7,8 @@ import java.util.List;
 public interface RunRouteService {
 
     RunRouteDto getRunRouteById(Integer userId);
+    
     void saveRunRoute(RunRouteDto runRouteDto);
+    
     List<RunRouteDto> getAllRunRoutes();
 }

@@ -1,0 +1,5 @@
+CREATE USER 'krecktenwald'@'localhost' IDENTIFIED BY 'krecktenwald';
+
+CREATE SCHEMA RUNTRACKERDB;
+GRANT ALL PRIVILEGES ON RUNTRACKERDB . * TO 'krecktenwald'@'localhost';
+FLUSH PRIVILEGES;
