@@ -8,11 +8,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.UUID;
 
-@Service
 public interface RunRecordService {
 
-	public RunRecord getRunRecordById(Long id);
+	public RunRecord findById(Long id);
 	public List<RunRecord> getRunRecords();
-	public void deleteRunRecord(long id);
+	public void delete(Long runRecordId);
+	public void save(RunRecordDto runRecordDto);
+	public void update(RunRecordDto runRecordDto, Long runRecordId);
 
 }

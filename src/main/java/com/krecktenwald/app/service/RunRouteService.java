@@ -9,8 +9,8 @@ public interface RunRouteService {
 
     public RunRoute findById(Long runRouteId);
     public RunRoute findByName(String runRouteName);
-    public void save(RunRouteDto runRouteDto);
     public List<RunRouteDto> getRunRoutes();
+    public void save(RunRouteDto runRouteDto);
     public void delete(Long runRouteId);
     public void update(RunRouteDto runRouteDto, Long runRouteId);
 

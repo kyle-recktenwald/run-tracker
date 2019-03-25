@@ -1,6 +1,8 @@
 package com.krecktenwald.app.service.impl;
 
+import com.krecktenwald.app.dao.RunRecordDao;
 import com.krecktenwald.app.dto.RunRecordDto;
+import com.krecktenwald.app.model.RunRecord;
 import com.krecktenwald.app.service.RunRecordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,20 +14,30 @@ import java.util.UUID;
 public class RunRecordServiceImpl implements RunRecordService {
 
     @Autowired
-    RunRecordDto runRecordDto;
+    RunRecordDao runRecordDao;
 
     @Override
-    public RunRecordDto getRunRecordById(UUID runRecordId) {
+    public RunRecord findById(Long id) {
         return null;
     }
 
     @Override
-    public void saveRunRecord(RunRecordDto runRecordDto) {
+    public List<RunRecord> getRunRecords() {
+        return null;
+    }
+
+    @Override
+    public void delete(Long runRecordId) {
 
     }
 
     @Override
-    public List<RunRecordDto> getAllRunRecords() {
-        return null;
+    public void save(RunRecordDto runRecordDto) {
+
+    }
+
+    @Override
+    public void update(RunRecordDto runRecordDto, Long runRecordId) {
+
     }
 }

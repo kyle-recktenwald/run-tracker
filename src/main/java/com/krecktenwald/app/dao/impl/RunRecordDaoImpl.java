@@ -2,10 +2,12 @@ package com.krecktenwald.app.dao.impl;
 
 import com.krecktenwald.app.dao.RunRecordDao;
 import com.krecktenwald.app.model.RunRecord;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class RunRecordDaoImpl implements RunRecordDao {
 
 	private List<RunRecord> runRecords = new ArrayList<>();
