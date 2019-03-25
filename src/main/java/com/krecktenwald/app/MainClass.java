@@ -8,10 +8,8 @@ import java.util.List;
 import java.util.Scanner;
 
 import com.krecktenwald.app.converter.AppConversion;
-import com.krecktenwald.app.dao.RunRecordDao;
+import com.krecktenwald.app.dao.impl.RunRecordDaoImpl;
 import com.krecktenwald.app.dao.RunRouteDao;
-import com.krecktenwald.app.domain.RunRecord;
-import com.krecktenwald.app.domain.RunRoute;
 
 public class MainClass {
 
@@ -73,9 +71,9 @@ public class MainClass {
 			System.out.println("Recorded run:");
 			System.out.println(runRecord);
 			
-			RunRecordDao runRecordDao = new RunRecordDao();
+			RunRecordDaoImpl runRecordDaoImpl = new RunRecordDaoImpl();
 			
-			runRecordDao.insertRunRecord(runRecord);
+			runRecordDaoImpl.insertRunRecord(runRecord);
 			
 		} else if (userSelection == 2) {
 			RunRouteDao runRouteDao = new RunRouteDao();

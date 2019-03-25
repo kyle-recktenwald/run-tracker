@@ -1,4 +1,4 @@
-package com.krecktenwald.app.entities;
+package com.krecktenwald.app.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.CreatedDate;

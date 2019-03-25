@@ -2,15 +2,8 @@ package com.krecktenwald.app;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.HashSet;
 import java.util.Properties;
-import java.util.Set;
-import java.util.UUID;
-
-import com.krecktenwald.app.domain.RunRoute;
 
 public class Database {
 	

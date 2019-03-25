@@ -1,11 +1,7 @@
-package com.krecktenwald.app.entities;
+package com.krecktenwald.app.model;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.math.BigInteger;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.UUID;
 
 @Entity
 public class RunRoute  extends BaseEntity {
@@ -22,7 +18,7 @@ public class RunRoute  extends BaseEntity {
     @Column(name="run_route_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    private UUID runRouteId;
+    private Long runRouteId;
 
     @Column(name="name")
     private String name;
@@ -33,12 +29,17 @@ public class RunRoute  extends BaseEntity {
     @Column(name="pace")
     private BigInteger pace;
 
+    public RunRoute(String name, double distance, BigInteger pace){
+        this.name = name;
+        this.distance = distance;
+        this.pace = pace;
+    }
 
-    public UUID getRunRouteId() {
+    public Long getRunRouteId() {
         return runRouteId;
     }
 
-    public void setRunRouteId(UUID runRouteId) {
+    public void setRunRouteId(Long runRouteId) {
         this.runRouteId = runRouteId;
     }
 

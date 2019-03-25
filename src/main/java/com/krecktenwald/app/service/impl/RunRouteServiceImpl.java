@@ -1,31 +1,51 @@
-/*
+
 package com.krecktenwald.app.service.impl;
 
+import com.krecktenwald.app.dao.RunRouteDao;
+import com.krecktenwald.app.dto.RunRouteDto;
+import com.krecktenwald.app.model.RunRoute;
 import com.krecktenwald.app.service.RunRouteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RunRouteServiceImpl implements RunRouteService{
+@Service
+public class RunRouteServiceImpl implements RunRouteService {
 
     @Autowired
-    RunRouteRepository runRouteRepository;
+    private RunRouteDao runRouteDao;
 
     @Override
-    public RunRouteDto getRunRouteById(Integer userId) {
-        return UserConverter.entityToDto(userRepository.getOne(userId));
+    public RunRoute findById(Long runRouteId) {
+        RunRoute runRoute = runRouteDao.get(runRouteId);
+        return runRoute;
     }
 
     @Override
-    public void saveUser(UserDto userDto) {
-        userRepository.save(UserConverter.dtoToEntity(userDto));
+    public RunRoute findByName(String runRouteName) {
+        return null;
     }
 
     @Override
-    public List<UserDto> getAllUsers() {
-        return userRepository.findAll().stream().map(UserConverter::entityToDto).collect(Collectors.toList());
+    public void save(RunRouteDto runRouteDto) {
+
     }
 
+    @Override
+    public List<RunRouteDto> getRunRoutes() {
+        return null;
+    }
+
+    @Override
+    public void delete(Long runRouteId) {
+
+    }
+
+    @Override
+    public void update(RunRouteDto runRouteDto, Long runRouteId) {
+
+    }
 }
-*/
+

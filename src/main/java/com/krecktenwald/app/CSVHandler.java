@@ -6,8 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.krecktenwald.app.domain.RunRoute;
-
 public class CSVHandler {
 
     public ArrayList readCSV(String fileName) {
