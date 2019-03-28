@@ -1,10 +1,12 @@
 package com.krecktenwald.app.model;
 
+import org.springframework.data.domain.Persistable;
+
 import javax.persistence.*;
 import java.math.BigInteger;
 
 @Entity
-public class RunRoute  extends BaseEntity {
+public class RunRoute  extends BaseEntity implements Persistable<Long> {
 
     /* PostGres Values:
      * uuid - id
@@ -35,7 +37,7 @@ public class RunRoute  extends BaseEntity {
         this.pace = pace;
     }
 
-    public Long getRunRouteId() {
+    public Long getId() {
         return runRouteId;
     }
 
@@ -65,5 +67,10 @@ public class RunRoute  extends BaseEntity {
 
     public void setPace(BigInteger pace) {
         this.pace = pace;
+    }
+
+    @Override
+    public boolean isNew() {
+        return false;
     }
 }

@@ -3,6 +3,7 @@ package com.krecktenwald.app.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.springframework.data.domain.Persistable;
 
 import javax.persistence.*;
 import java.math.BigInteger;
@@ -11,7 +12,7 @@ import java.time.LocalTime;
 import java.util.UUID;
 
 @Entity
-public class RunRecord extends BaseEntity {
+public class RunRecord extends BaseEntity implements Persistable<Long> {
 
     /* PostGres Values:
      * uuid - id
@@ -72,11 +73,16 @@ public class RunRecord extends BaseEntity {
     @Column(name="notes")
     private String notes;
 
-    public Long getRunRouteId() {
+    public Long getId() {
         return runRouteId;
     }
 
-    public void setRunRouteId(Long runRouteId) {
+    @Override
+    public boolean isNew() {
+        return false;
+    }
+
+    public void setId(Long runRouteId) {
         this.runRouteId = runRouteId;
     }
 

@@ -2,14 +2,14 @@ package com.krecktenwald.app.dao;
 
 import java.sql.SQLException;
 
-import com.krecktenwald.app.dao.impl.RunRecordDaoImpl;
+import com.krecktenwald.app.dao.impl.RunRecordDao;
 import org.junit.*;
 
-public class RunRecordDaoImplTest {
+public class RunRecordDaoTest {
 	
 	@Test
 	public void testFindAll() throws SQLException{
-		RunRecordDaoImpl runRecordDaoImpl = new RunRecordDaoImpl();
+		RunRecordDao runRecordDaoImpl = new RunRecordDao();
 		
 		System.out.println(runRecordDaoImpl.findAll());
 	}
