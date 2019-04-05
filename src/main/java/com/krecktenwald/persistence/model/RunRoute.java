@@ -1,4 +1,4 @@
-package com.krecktenwald.app.model;
+package com.krecktenwald.persistence.model;
 
 import org.springframework.data.domain.Persistable;
 

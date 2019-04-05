@@ -1,11 +1,11 @@
 
-package com.krecktenwald.app.service.impl;
+package com.krecktenwald.persistence.service.impl;
 
-import com.krecktenwald.app.dao.IRunRouteDao;
-import com.krecktenwald.app.dao.common.IOperations;
-import com.krecktenwald.app.model.RunRoute;
-import com.krecktenwald.app.service.IRunRouteService;
-import com.krecktenwald.app.service.common.AbstractHibernateService;
+import com.krecktenwald.persistence.dao.IRunRouteDao;
+import com.krecktenwald.persistence.dao.common.IOperations;
+import com.krecktenwald.persistence.model.RunRoute;
+import com.krecktenwald.persistence.service.IRunRouteService;
+import com.krecktenwald.persistence.service.common.AbstractHibernateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;

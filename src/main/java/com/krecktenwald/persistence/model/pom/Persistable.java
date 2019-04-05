@@ -1,4 +1,4 @@
-package com.krecktenwald.app.model.pom;
+package com.krecktenwald.persistence.model.pom;
 
 import java.io.Serializable;
 

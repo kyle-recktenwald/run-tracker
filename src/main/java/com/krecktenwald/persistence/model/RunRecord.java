@@ -1,4 +1,4 @@
-package com.krecktenwald.app.model;
+package com.krecktenwald.persistence.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.OnDelete;
@@ -9,7 +9,6 @@ import javax.persistence.*;
 import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.UUID;
 
 @Entity
 public class RunRecord extends BaseEntity implements Persistable<Long> {

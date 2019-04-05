@@ -1,8 +1,8 @@
-package com.krecktenwald.app.service.common;
+package com.krecktenwald.persistence.service.common;
 
 import java.io.Serializable;
 import java.util.List;
-import com.krecktenwald.app.dao.common.IOperations;
+import com.krecktenwald.persistence.dao.common.IOperations;
 
 public abstract class AbstractService<T extends Serializable> implements IOperations<T> {
 

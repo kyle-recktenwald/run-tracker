@@ -1,8 +1,8 @@
-package com.krecktenwald.app.dao.impl;
+package com.krecktenwald.persistence.dao.impl;
 
-import com.krecktenwald.app.dao.common.AbstractHibernateDao;
-import com.krecktenwald.app.dao.IRunRouteDao;
-import com.krecktenwald.app.model.RunRoute;
+import com.krecktenwald.persistence.dao.common.AbstractHibernateDao;
+import com.krecktenwald.persistence.dao.IRunRouteDao;
+import com.krecktenwald.persistence.model.RunRoute;
 import org.springframework.stereotype.Repository;
 
 

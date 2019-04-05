@@ -1,13 +1,13 @@
-package com.krecktenwald.app.service.common;
+package com.krecktenwald.persistence.service.common;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.krecktenwald.app.dao.common.IOperations;
+import com.krecktenwald.persistence.dao.common.IOperations;
 import org.springframework.transaction.annotation.Transactional;
 
-@Transactional(value = "hibernateTransactionManager")
-public abstract class AbstractHibernateService<T extends Serializable> extends AbstractService<T> implements IOperations<T> {
+@Transactional(value = "jpaTransactionManager")
+public abstract class AbstractJpaService<T extends Serializable> extends AbstractService<T> implements IOperations<T> {
 
     @Override
     public T findOne(final long id) {

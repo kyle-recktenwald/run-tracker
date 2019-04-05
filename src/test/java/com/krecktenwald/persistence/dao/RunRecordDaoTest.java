@@ -1,8 +1,8 @@
-package com.krecktenwald.app.dao;
+package com.krecktenwald.persistence.dao;
 
 import java.sql.SQLException;
 
-import com.krecktenwald.app.dao.impl.RunRecordDao;
+import com.krecktenwald.persistence.dao.impl.RunRecordDao;
 import org.junit.*;
 
 public class RunRecordDaoTest {

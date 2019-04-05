@@ -1,4 +1,4 @@
-package com.krecktenwald.app.dao.common;
+package com.krecktenwald.persistence.dao.common;
 
 import java.io.Serializable;
 import java.util.List;

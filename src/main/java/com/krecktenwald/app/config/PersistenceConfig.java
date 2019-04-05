@@ -4,6 +4,9 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import com.krecktenwald.persistence.service.IRunRecordService;
+import com.krecktenwald.persistence.service.impl.RunRecordJpaService;
+import com.krecktenwald.persistence.service.impl.RunRecordService;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -45,7 +48,7 @@ public class PersistenceConfig {
     public LocalSessionFactoryBean sessionFactory() {
         final LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(restDataSource());
-        sessionFactory.setPackagesToScan(new String[] { "com.krecktenwald.app.model" });
+        sessionFactory.setPackagesToScan(new String[] { "com.krecktenwald.persistence.model" });
         sessionFactory.setHibernateProperties(hibernateProperties());
 
         return sessionFactory;
@@ -55,7 +58,7 @@ public class PersistenceConfig {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
         emf.setDataSource(restDataSource());
-        emf.setPackagesToScan(new String[] { "com.krecktenwald.app.model" });
+        emf.setPackagesToScan(new String[] { "com.krecktenwald.persistence.model" });
 
         final JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         emf.setJpaVendorAdapter(vendorAdapter);
@@ -95,8 +98,8 @@ public class PersistenceConfig {
     }
 
     @Bean
-    public IBarService barJpaService() {
-        return new BarJpaService();
+    public IRunRecordService runRecordJpaService() {
+        return new RunRecordJpaService();
     }
 
     @Bean
@@ -104,19 +107,10 @@ public class PersistenceConfig {
         return new BarSpringDataJpaService();
     }
 
-    @Bean
-    public IFooService fooHibernateService() {
-        return new FooService();
-    }
 
     @Bean
-    public IBarAuditableService barHibernateAuditableService() {
-        return new BarAuditableService();
-    }
-
-    @Bean
-    public IFooAuditableService fooHibernateAuditableService() {
-        return new FooAuditableService();
+    public IRunRecordService runRecordHibernateService() {
+        return new RunRecordService();
     }
 
     @Bean

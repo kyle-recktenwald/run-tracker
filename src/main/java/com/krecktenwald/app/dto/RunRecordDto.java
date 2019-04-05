@@ -1,6 +1,6 @@
 package com.krecktenwald.app.dto;
 
-import com.krecktenwald.app.model.RunRoute;
+import com.krecktenwald.persistence.model.RunRoute;
 
 import java.time.Duration;
 import java.time.LocalDate;

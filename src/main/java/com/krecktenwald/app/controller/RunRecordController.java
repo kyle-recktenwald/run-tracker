@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.krecktenwald.app.dto.RunRecordDto;
-import com.krecktenwald.app.service.IRunRecordService;
+import com.krecktenwald.persistence.service.IRunRecordService;
 import com.krecktenwald.utils.Constants;
 
 @RequestMapping("/run-record")
