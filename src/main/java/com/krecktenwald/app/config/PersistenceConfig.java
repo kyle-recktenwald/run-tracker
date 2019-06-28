@@ -4,9 +4,16 @@ import java.util.Properties;
 
 import javax.sql.DataSource;
 
+import com.krecktenwald.persistence.dao.IRunRecordAuditableDao;
+import com.krecktenwald.persistence.dao.IRunRecordDao;
+import com.krecktenwald.persistence.dao.impl.RunRecordDao;
+import com.krecktenwald.persistence.dao.impl.RunRecordJpaDao;
+import com.krecktenwald.persistence.service.IRunRecordAuditableService;
 import com.krecktenwald.persistence.service.IRunRecordService;
+import com.krecktenwald.persistence.service.impl.RunRecordAuditableService;
 import com.krecktenwald.persistence.service.impl.RunRecordJpaService;
 import com.krecktenwald.persistence.service.impl.RunRecordService;
+import com.krecktenwald.persistence.service.impl.RunRecordSpringDataJpaService;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -97,46 +104,41 @@ public class PersistenceConfig {
         return new PersistenceExceptionTranslationPostProcessor();
     }
 
+    //Run Record Beans:
+
     @Bean
     public IRunRecordService runRecordJpaService() {
         return new RunRecordJpaService();
     }
 
     @Bean
-    public IBarService barSpringDataJpaService() {
-        return new BarSpringDataJpaService();
-    }
-
-
-    @Bean
-    public IRunRecordService runRecordHibernateService() {
-        return new RunRecordService();
+    public IRunRecordService runRecordSpringDataJpaService() {
+        return new RunRecordSpringDataJpaService();
     }
 
     @Bean
-    public IBarDao barJpaDao() {
-        return new BarJpaDao();
+    public IRunRecordAuditableService runRecordHibernateAuditableService() {
+        return new RunRecordAuditableService();
     }
 
     @Bean
-    public IBarDao barHibernateDao() {
-        return new BarDao();
+    public IRunRecordDao barJpaDao() {
+        return new RunRecordJpaDao();
     }
 
     @Bean
-    public IBarAuditableDao barHibernateAuditableDao() {
-        return new BarAuditableDao();
+    public IRunRecordDao runRecordHibernateDao() {
+        return new RunRecordDao();
     }
 
     @Bean
-    public IFooDao fooHibernateDao() {
-        return new FooDao();
+    public IRunRecordAuditableDao barHibernateAuditableDao() {
+        return new RunRecordAuditableDao();
     }
 
-    @Bean
-    public IFooAuditableDao fooHibernateAuditableDao() {
-        return new FooAuditableDao();
-    }
+    //TODO: Run Route Beans
+
+
 
     private final Properties hibernateProperties() {
         final Properties hibernateProperties = new Properties();

@@ -78,9 +78,10 @@
 
 		<dependency>
 			<groupId>com.google.guava</groupId>
-			<artifactId>guava-base</artifactId>
-			<version>r03</version>
+			<artifactId>guava</artifactId>
+			<version>19.0</version>
 		</dependency>
+
 
 
 	</dependencies>
